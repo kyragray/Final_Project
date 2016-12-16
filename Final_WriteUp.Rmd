@@ -546,7 +546,7 @@ attacks_location_na <- attacks_location_na %>%
 
 The success of the geocode function gave me the ability to make many leaflet plots to attempt to understand or uncover any location-based patterns for shark attacks. The first four leaflet plots are the same plots with varying emphasis on different activities (by adjusting slightly the size of the radius of the circle marker) in order to better view varying trends. 
 
-1. Emphasis placed on "Fishing involved" variable: One would expect a strong prevalence of attacks after engaging in "Fishing involved" activies in areas where a lot of fishing occurs in the first place. We see this on the map along the coast of California, Florida and up the eastern seaboard of the US, Hawaii, Brazil, the southern coast of Africa, Eastern side of Italy, along the majority of the coast of Australia and New Zealand, and the islands northeast of those two major island nations. 
+Emphasis placed on "Fishing involved" variable: One would expect a strong prevalence of attacks after engaging in "Fishing involved" activies in areas where a lot of fishing occurs in the first place. We see this on the map along the coast of California, Florida and up the eastern seaboard of the US, Hawaii, Brazil, the southern coast of Africa, Eastern side of Italy, along the majority of the coast of Australia and New Zealand, and the islands northeast of those two major island nations. 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=6}
 pal <- colorFactor(rainbow(6), attacks_location_na$Activity3)
 
@@ -564,7 +564,7 @@ leaflet(attacks_location_na) %>%
 ```
 
 
-2. Emphasis placed on "Board involved" variable: one would expect strong prevalence in shark attacks during activities that are "Board involved" to be where people are engaging in those activities in the first place. We see a strong overlap in some of the locations we saw for the "Fishing invovled" category, however not all. The "Board involved" emphasis is limited moreso to the entire western coast of the US, the US Gulf and Southern Atlantic coast, the Southern Coast of Africa, sprinkled around New Zealand, and the southern coastal half of Australia. This is not surprising as where that is where a lot of surfing in particular occurs and these areas contain a lot of beach vacation hot spots where people are often engaging in board involved aquatic sports.  
+Emphasis placed on "Board involved" variable: one would expect strong prevalence in shark attacks during activities that are "Board involved" to be where people are engaging in those activities in the first place. We see a strong overlap in some of the locations we saw for the "Fishing invovled" category, however not all. The "Board involved" emphasis is limited moreso to the entire western coast of the US, the US Gulf and Southern Atlantic coast, the Southern Coast of Africa, sprinkled around New Zealand, and the southern coastal half of Australia. This is not surprising as where that is where a lot of surfing in particular occurs and these areas contain a lot of beach vacation hot spots where people are often engaging in board involved aquatic sports.  
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=6}
 leaflet(attacks_location_na) %>%
   addTiles() %>%
@@ -580,7 +580,7 @@ leaflet(attacks_location_na) %>%
 ```
 
 
-3. Emphasis placed on "Air or Sea Disaster" variable: not very strong trends with this categorization, strong prevalence in the Phillipines, however this could be due to the fact that there simply aren't as much shark attacks that occured after an Air or Sea Disaster, as the first two categorizations above (despite shark attacks during naval or air disaster in WWII being the main motivation for founding the ISAF). 
+Emphasis placed on "Air or Sea Disaster" variable: not very strong trends with this categorization, strong prevalence in the Phillipines, however this could be due to the fact that there simply aren't as much shark attacks that occured after an Air or Sea Disaster, as the first two categorizations above (despite shark attacks during naval or air disaster in WWII being the main motivation for founding the ISAF). 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=6}
 leaflet(attacks_location_na) %>%
   addTiles() %>%
@@ -596,7 +596,7 @@ leaflet(attacks_location_na) %>%
 ```
 
 
-4. Emphasis placed on "Swimming/Diving" variable: the strong prevalence across the map wherever shark attacks occur is not surprising because this category of activity is the most common activity the victim is engaging in when a shark attack occurs. Howwever, the Pacific Northwest seems to be an exception to this rule as it is a stronger prevalance of "Board involved" attacks. This could due to the fact that recreational surfing (and other board aquatic sports) are much more common than recreational swimming in the ocean in this part of the US because of how cold the Pacific is in Northern California, Oregon, and Washington. And thus most people willing to brave the cold water are doing so because they want to surf and are most likely wearing a wet suit of some kind (as my family and I do whenver we go to Half Moon Bay or Pacifica, CA to boogie-board). 
+Emphasis placed on "Swimming/Diving" variable: the strong prevalence across the map wherever shark attacks occur is not surprising because this category of activity is the most common activity the victim is engaging in when a shark attack occurs. Howwever, the Pacific Northwest seems to be an exception to this rule as it is a stronger prevalance of "Board involved" attacks. This could due to the fact that recreational surfing (and other board aquatic sports) are much more common than recreational swimming in the ocean in this part of the US because of how cold the Pacific is in Northern California, Oregon, and Washington. And thus most people willing to brave the cold water are doing so because they want to surf and are most likely wearing a wet suit of some kind (as my family and I do whenver we go to Half Moon Bay or Pacifica, CA to boogie-board). 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=6}
   ## 4. emphasis on Swimming/Diving
 leaflet(attacks_location_na) %>%
