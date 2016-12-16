@@ -26,7 +26,7 @@ By creating leaflet plots of the location of each attack, I was able to portray 
 
 
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 #
 # Include code for one plot here
 #
@@ -307,66 +307,6 @@ attacks_clean <- attacks %>%
          Injury1,
          Fatal1, 
          Species)
-
-
-## Prelude to making a plot for attacks over the years 
-attacks_year <- attacks_clean %>%
-  select(Year) %>% 
-  filter(Year>1500) %>% 
-  na.omit(Year) %>% 
-  group_by(Year) %>% 
-  tally()
-
-##Plot of attacks over the years 
-ggplot(attacks_year, aes(x=Year, y=n)) +
-  geom_line() +
-  labs(title="Shark Attacks per Year, 1543-Present", x="Year", y= "Number of Attacks")
-
-ggplot(attacks_year, aes(x=Year, y=n)) +
-  geom_line() +
-  labs(title="Shark Attacks per Year, 1800-Present", x="Year", y= "Number of Attacks") +
-  annotate("point", x=1975, y=49, col="red", size=2) +
-  annotate("point", x=1959, y=93, col="blue", size=2) +
-  xlim(1800, 2017)
-
-
-## plot of distribution of shark attack type 
-attacks_type <- attacks_clean %>%
-  group_by(Type) %>% 
-  tally()
-
-ggplot(attacks_type, aes(x=Type, y=n)) +
-  geom_bar(stat="identity") +
-  labs(title="Distribution of Shark Attack Type", x="Attack Type", y="Number of Attacks")
-
-## top 15 countrys of attacks plot 
-attacks_country <- attacks_clean %>%
-  group_by(Country) %>% 
-  tally() %>% 
-  na.omit(Country) %>% 
-  filter(n > 40) %>% 
-  arrange(desc(n))
-
-ggplot(attacks_country, aes(x=reorder(Country, n), y=n)) +
-  geom_bar(stat="identity") +
-  coord_flip() +
-  labs(title="Distribution of Shark Attack Location-Top 15", x="Attack Country", y="Number of Attacks")
-
-
-##fatal attacks over time
-attacks_time_fatal <- attacks_clean %>% 
-  select(Year, Fatal1) %>% 
-  rename(Fatal=Fatal1) %>% 
-  filter(Fatal == "Y" | Fatal == "N") %>% 
-  group_by(Year, Fatal) %>% 
-  na.omit(Fatal) %>% 
-  tally()
-
-ggplot(attacks_time_fatal, aes(x=Year, y=n, col=Fatal)) +
-  geom_point() +
-  xlim(1800, 2017) +
-  labs(title="Fatal vs Non-Fatal Attacks over Time", x="Year", y="Number of Attacks")
-
 
 ##Dealing with locations of attacks
 attacks_location <- attacks %>% 
