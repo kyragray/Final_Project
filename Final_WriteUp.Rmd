@@ -35,7 +35,7 @@ attacks <- read_csv("~/Desktop/Middlebury/Data Science/Final-Project/attacks.csv
 
 
 ## Admistrative:
-* The URL of the RPubs published URL [here](http://rpubs.com/kyragray/final-writeup).
+* The URL of the RPubs published URL [here](http://rpubs.com/kyragray/235161).
 
 ## Abstract: 
 The analysis conducted in the this project explores data drawm from a global shark attacks database dating back to the 1500s that can be accessed [here](https://www.kaggle.com/teajay/global-shark-attacks) on Kaggle. The data originally comes from the [Global Shark Attack File](http://www.sharkattackfile.net/index.htm) which I have assumed got its data from the [International Shark Attack File](https://www.flmnh.ufl.edu/fish/isaf/home/), due to some specific similarities in the description of the ISAF's database and the data I worked with. The original dataset included 16 original variables and of those 16 the variables that proved most relevant to my anlysis were Year, Type of Attack (provoked vs unprovoked), Country, Area, Location, the Activity was victim was engaging in when the attack occured, Injury, and Fatal (Y/N). 
