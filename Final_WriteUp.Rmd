@@ -32,10 +32,8 @@ library(colorspace)
 attacks <- read_csv("~/Desktop/Middlebury/Data Science/Final-Project/attacks.csv")
 ```
 
-
-
 ## Admistrative:
-* The URL of the RPubs published URL [here](http://rpubs.com/kyragray/235161).
+* RPubs Document URL [here](http://rpubs.com/kyragray/235161).
 
 ## Abstract: 
 The analysis conducted in the this project explores data drawm from a global shark attacks database dating back to the 1500s that can be accessed [here](https://www.kaggle.com/teajay/global-shark-attacks) on Kaggle. The data originally comes from the [Global Shark Attack File](http://www.sharkattackfile.net/index.htm) which I have assumed got its data from the [International Shark Attack File](https://www.flmnh.ufl.edu/fish/isaf/home/), due to some specific similarities in the description of the ISAF's database and the data I worked with. The original dataset included 16 original variables and of those 16 the variables that proved most relevant to my anlysis were Year, Type of Attack (provoked vs unprovoked), Country, Area, Location, the Activity was victim was engaging in when the attack occured, Injury, and Fatal (Y/N). 
@@ -882,18 +880,5 @@ knitr::kable(test_correct)
 This model correctly predicts the fatality of a shark attack when given the activity the victim was engaging in when the attack occured, the location of the attack, and the type of attack with 67% accuracy using the training data and 70% accuracy using the test data. It is surprising that the accuracy of the model increases when using the test data as opposed to the training data because the model was built using the training data. While the accuracy of this model isn't anywhere near 90-100%, I think that a 70% accuracy is impressive considering the over-generalized categories for each variable that simplfied the model.
 
 ## Conclusion: 
-
-
-For when you don't want your code to show
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=6}
-
-```
-
-For when you do want your code to show 
-```{r, echo=TRUE, message=TRUE, warning=TRUE, fig.width=12, fig.height=6}
-
-
-```
-
-
+Overall, the relationships between where shark attacks happen and the context in which they happened (Activity, Type of attack) and the outcome of the attack (Fatal, Injury) seem to have moderate to strong regional trends, given the leaflet plots above. Additionally, considering the results of my predictive model, it seems that if given the location of the attack, the activity of the victim, and the type of attack one can accurately predict the fatality of the shark attack at a rate of 70%. However, given the limitations of my dataset due to the issues surrounding the reporting of shark attacks, the results of my analysis must evaluated in that context. 
 
