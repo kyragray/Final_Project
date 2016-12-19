@@ -29,7 +29,7 @@ library(colorspace)
 # Do not edit this code block. By setting cache=TRUE, we are saving the output 
 # of this block to the cache. That way it only needs to run once.  This is
 # especially useful for portions of code that take a long time to run.
-attacks <- read_csv("~/Desktop/Middlebury/Data Science/Final-Project/attacks.csv")
+attacks <- read_csv("attacks.csv")
 ```
 
 ## Admistrative:

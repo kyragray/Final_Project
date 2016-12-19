@@ -12,7 +12,7 @@ library(readr)
 library(colorspace)
 
 
-attacks <- read_csv("~/Desktop/Middlebury/Data Science/Final-Project/attacks.csv")
+attacks <- read_csv("attacks.csv")
 attacks <- attacks %>% 
   tibble::rownames_to_column(var="id_internal")
 
